@@ -1,24 +1,51 @@
-package com.cn;
-import com.cn.Login;
+package com.feicuiedu.atm;
+//import com.cn.Login;
 import java.util.Scanner;
 public class Deposits{
-	public static void (User user){
-		Login log=new Login();
-	 System.out.println("ÇëÊäÈë´æ¿î½ğ¶î:");
-	 Scanner sc=new Scanner(System.in);
-	 int index=sc.Scanner();
-	 System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥"); 
-	 int input=new Scanner1(System.in).nextInt();
-     switch(input){
-     	case 1:
-     	System.out.println("²Ù×÷³É¹¦");
-     	System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-        case 2:
-        System.out.println("ÇëÊäÈë´æ¿î½ğ¶î:");
-	    Scanner sc=new Scanner(System.in);
-	    int index=sc.Scanner();
-	    case 3:
-	    System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-      }
- }  
+	private User user ;
+	  public Deposits(User user){
+		this.user =user;
+}	   	
+	public void getDeposits(){
+		double number;
+
+	while(true)	{
+		System.out.println("è¯·è¾“å…¥å­˜æ¬¾é‡‘é¢(100çš„æ•´æ•°):");
+	    Scanner input=new Scanner(System.in);
+	    double num = input.nextDouble();
+			if(num%100==0&&num>0){
+				number=num;
+				break;		
+			}
+			else{
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
+				continue;
+			}
+	while(true)	{
+	    System.out.println("1.ç¡®è®¤");		
+		System.out.println("2.é‡æ–°è¾“å…¥");
+		System.out.println("3.è¿”å›èœå•");
+		Scanner input = new Scanner(System.in);
+		String num2=input.next();
+			if(num2.equals("1")){
+				double amount=user.getAmount();
+				user.setAmount(amount+number);
+				System.out.println("å­˜æ¬¾æˆåŠŸï¼Œç°åœ¨çš„ä½™é¢ä¸º"+user.getAmount());
+				Success success = new Success(user);
+				success.getSuccess();
+			}
+			if(num2.equals("2")){
+				getDeposit();
+			}
+			if(num2.equals("3")){
+				Menu menu = new Menu(user);
+				menu.getMethod();
+			}
+			else{
+				System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
+				continue;
+			}			
+		}	
+	}		
+ }	 
 }
