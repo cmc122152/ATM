@@ -1,16 +1,34 @@
+package com.feicuiedu.atm;
 import java.util.Scanner;
 public class Login{
-	public static void action(User user) {
-		Scanner acc =new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒøĞĞ¿¨ºÅ");
-		String account1=acc.next();
-		Scanner pass=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÃÜÂë");
-        String password1=pass.next();
-        //String account = user.getAccount();
-		//String password = user.getPassword();
-        if(account1.equals("370120180104")&&password1.equals("1234567")){
-        	
-        }
-	}
+	User user = new User();
+	while (true) {
+	  Scanner scanner = new Scanner(System.in);
+	  System.out.println("è¯·è¾“å…¥è´¦å·:");
+	  String CardNumber = scanner.next();
+
+		if (CardNumber.length() == 12) {
+
+			if (CardNumber.equals(user.getCardNumber()) || CardNumber.equals("370120180108")) {
+
+			  System.out.println("è¯·è¾“å…¥å¯†ç :");
+			  String Password = scanner.next();
+				if (Password.equals(user.getPassword())) {
+
+						System.out.println("ç™»å½•æˆåŠŸ!");
+						Menu meun = new Menu();
+						meun.choiceMenu(user);
+
+					} else {
+
+						System.out.println("å¯†ç é”™è¯¯");
+					}
+				} else {
+					System.out.println("è¯¥ç”¨æˆ·ä¸å­˜åœ¨,è¯·é‡æ–°è¾“å…¥!");
+				}
+
+			} else {
+				System.out.println("è´¦å·è¾“å…¥é•¿åº¦æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥!");
+			}
+
 }
