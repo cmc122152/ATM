@@ -24,11 +24,11 @@ public class Login{
 						System.out.println("密码错误");
 					}
 				} else {
-					System.out.println("该用户不存在,请重新输入!");
+					System.out.println("用户不存在,请再次重新输入!");
 				}
 
 			} else {
-				System.out.println("账号输入长度有误,请重新输入!");
+				System.out.println("输入账号长度有误,请再次重新输入!");
 			}
 
 }
