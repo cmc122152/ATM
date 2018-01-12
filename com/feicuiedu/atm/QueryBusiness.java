@@ -1,20 +1,20 @@
-//package com.cn;
-//import com.cn.User;
+package com.feicuiedu.atm;
+
 import java.util.Scanner;
 public class QueryBusiness{
 	public void showInfor(User user){
    // User user=new User();
-	System.out.println("ÕË»§ĞÕÃû:"+user.getName());
-	System.out.println("Óà¶î:"+user.getAmount());
-	System.out.println("1:·µ»ØÉÏÒ»¼¶");
-	System.out.println("2:ÍË³ö");
+	System.out.println("è´¦æˆ·å§“å:"+user.getName());
+	System.out.println("ä½™é¢:"+user.getAmount());
+	System.out.println("1:è¿”å›ä¸Šä¸€çº§");
+	System.out.println("2:é€€å‡º");
 	int input = new Scanner(System.in).nextInt();
     switch(input){
     	case 1:
-    	System.out.println("1:²éÑ¯ 2:×ªÕË 3:È¡¿î 4:´æ¿î 5:ÍË¿¨");
+    	System.out.println("1:æŸ¥è¯¢ 2:è½¬è´¦ 3:å–æ¬¾ 4:å­˜æ¬¾ 5:é€€å¡");
     	break;
     	case 2:
-    	//System.out.println("ÍË³ö");
+    	//System.out.println("é€€å‡º");
     	break;
     }
  }	
