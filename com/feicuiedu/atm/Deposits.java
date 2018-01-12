@@ -1,5 +1,5 @@
 package com.feicuiedu.atm;
-//import com.cn.Login;
+
 import java.util.Scanner;
 public class Deposits{
 	private User user ;
