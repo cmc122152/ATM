@@ -1,83 +1,147 @@
+package com.feicuiedu.atm;
 import java.util.Scanner;
 public class TransferBusiness{
-	private static String name="ÍõÎå";
+  User user = new User();
+  double num=user.getAmount();
+  
+  while(ture){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("è¯·è¾“å…¥å¯¹æ–¹è´¦å·:");
+    String CardNumber = scanner.next();
+   if(CardNumber.length() == 12){
+    System.out.println("è¯·è¾“å…¥é‡‘é¢:");
+    Scanner sc_mon=new Scanner(System.in);
+    int mon=sc_mon.nextInt(); 
+      if(mon>num){
+        System.out.ptintln("ä½™é¢ä¸è¶³");
+        break;
+      }
+      else if(mon<num){
+        money=num;
+        break;
+      }
+   }
+   while(ture){
+    System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•"); 
+    int input=new Scanner(System.in);
+    String index=input.next();
+    if(index.equals("1")){
+        System.out.println("å¯¹æ–¹å¡å·:"+CardNumber);
+        System.out.println("å¯¹æ–¹å§“å:"+name);
+        System.out.println("è½¬è´¦é‡‘é¢:"+mon);
+        System.out.println("1.ç¡®è®¤è½¬è´¦");
+        System.out.println("2.è¿”å›ä¸Šä¸€çº§");
+        System.out.println("3.é€€å‡º");
+        int input1=new Scanner(System.in);
+        String ber=input1.next();
+        if(ber.equals("1")){
+          double amount=user.getAmount();
+          user.setAmount(amount-money);
+          System.out.println("è½¬è´¦æˆåŠŸ,ä½™é¢ä¸º"+user.getAmount());
+          Success success = new Success(user);
+          success.getSuccess();
+        }
+        if(ber.equals("2")){
+          get. TransferBusiness();
+        }
+        if(ber.equals("3")){
+          continue;
+        }
+        else if(){
+          System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
+        }
+    }
+    if(index.equals("2")){
+      get. TransferBusiness();
+    }
+    if(index.equals("3")){
+        Menu menu = new Menu(user);
+        menu.getMethod();
+    }
+    else if(){
+      System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
+      continue;
+    }
+   }
+	/*private static String name="ç‹äº”";
   public static void (User user) {
-	System.out.println("ÇëÊäÈë¶Ô·½ÒøĞĞ¿¨ºÅ:");
+	System.out.println("è¯·è¾“å…¥å¯¹æ–¹é“¶è¡Œå¡å·:");
 	Scanner sc=new Scanner(System.in);
 	 String index=sc.next();
-	 System.out.println("ÇëÊäÈë½ğ¶î:");	
+	 System.out.println("è¯·è¾“å…¥é‡‘é¢:");	
 	 Scanner sc_mon=new Scanner(System.in);
 	 int mon=sc_mon.nextInt();
-	 System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥"); 
+	 System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•"); 
 	 int input=new Scanner(System.in).nextInt();
-     //µÚÒ»´Î
+     //ç¬¬ä¸€æ¬¡
      switch(input){
      case 1:
-        System.out.println("¶Ô·½¿¨ºÅ:"+index);
-        System.out.println("¶Ô·½ĞÕÃû:"+name);
-        System.out.println("×ªÕË½ğ¶î:"+mon);
-        System.out.println("1.È·ÈÏ×ªÕË");
-        System.out.println("2.·µ»ØÉÏÒ»¼¶");
-        System.out.println("3.ÍË³ö");
+        System.out.println("å¯¹æ–¹å¡å·:"+index);
+        System.out.println("å¯¹æ–¹å§“å:"+name);
+        System.out.println("è½¬è´¦é‡‘é¢:"+mon);
+        System.out.println("1.ç¡®è®¤è½¬è´¦");
+        System.out.println("2.è¿”å›ä¸Šä¸€çº§");
+        System.out.println("3.é€€å‡º");
         break;
      case 2:
-        System.out.println("ÇëÊäÈë¶Ô·½ÒøĞĞ¿¨ºÅ:");
+        System.out.println("è¯·è¾“å…¥å¯¹æ–¹é“¶è¡Œå¡å·:");
 	    Scanner sc1=new Scanner(System.in);
 	    String index1=sc1.next();
-	    System.out.println("ÇëÊäÈë½ğ¶î:");	
+	    System.out.println("è¯·è¾“å…¥é‡‘é¢:");	
 	    Scanner sc_mon1=new Scanner(System.in);
 	    int mon1=sc_mon1.nextInt();
-	    System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥"); 
+	    System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•"); 
 	    int input1=new Scanner(System.in).nextInt();
          //
          switch(input1){
      	  case 1:
-          System.out.println("¶Ô·½¿¨ºÅ:"+index1);
-          System.out.println("¶Ô·½ĞÕÃû:"+name);
-          System.out.println("×ªÕË½ğ¶î:"+mon1);
-          System.out.println("1.È·ÈÏ×ªÕË");
-          System.out.println("2.·µ»ØÉÏÒ»¼¶");
-          System.out.println("3.ÍË³ö");
+          System.out.println("å¯¹æ–¹å¡å·:"+index1);
+          System.out.println("å¯¹æ–¹å§“å:"+name);
+          System.out.println("è½¬è´¦é‡‘é¢:"+mon1);
+          System.out.println("1.ç¡®è®¤è½¬è´¦");
+          System.out.println("2.è¿”å›ä¸Šä¸€çº§");
+          System.out.println("3.é€€å‡º");
           case 2:
-          System.out.println("ÇëÊäÈë¶Ô·½ÒøĞĞ¿¨ºÅ:");
+          System.out.println("è¯·è¾“å…¥å¯¹æ–¹é“¶è¡Œå¡å·:");
 	      Scanner sc2=new Scanner(System.in);
 	      String index2=sc2.next();
-	      System.out.println("ÇëÊäÈë½ğ¶î:");	
+	      System.out.println("è¯·è¾“å…¥é‡‘é¢:");	
 	      Scanner sc_mon2=new Scanner(System.in);
 	      int mon2=sc_mon2.nextInt();
-	      System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥"); 
+	      System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•"); 
 	      int input2=new Scanner(System.in).nextInt(); 
 	      
-           //µÚÈı´Î
+           //ç¬¬ä¸‰æ¬¡
 	        switch(input2){
      	    case 1:
-            System.out.println("¶Ô·½¿¨ºÅ:"+index);
-            System.out.println("¶Ô·½ĞÕÃû:"+name);
-            System.out.println("×ªÕË½ğ¶î:"+mon);
-            System.out.println("1.È·ÈÏ×ªÕË");
-            System.out.println("2.·µ»ØÉÏÒ»¼¶");
-            System.out.println("3.ÍË³ö");
+            System.out.println("å¯¹æ–¹å¡å·:"+index);
+            System.out.println("å¯¹æ–¹å§“å:"+name);
+            System.out.println("è½¬è´¦é‡‘é¢:"+mon);
+            System.out.println("1.ç¡®è®¤è½¬è´¦");
+            System.out.println("2.è¿”å›ä¸Šä¸€çº§");
+            System.out.println("3.é€€å‡º");
             break;
             case 2:
-            System.out.println("ÇëÊäÈë¶Ô·½ÒøĞĞ¿¨ºÅ:");
+            System.out.println("è¯·è¾“å…¥å¯¹æ–¹é“¶è¡Œå¡å·:");
 	        Scanner sc3=new Scanner(System.in);
 	        String index3=sc3.next();
-	        System.out.println("ÇëÊäÈë½ğ¶î:");	
+	        System.out.println("è¯·è¾“å…¥é‡‘é¢:");	
 	        Scanner sc_mon3=new Scanner(System.in);
 	        int mon3=sc_mon3.nextInt();
-	        System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥"); 
+	        System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•"); 
 	        int input3=new Scanner(System.in).nextInt(); 
 	        case 3:
-            System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
+            System.out.println("1.æŸ¥è¯¢ 2.è½¬è´¦ 3.å–æ¬¾ 4.å­˜æ¬¾ 5.é€€å¡");
             break;}
           case 3:
-          System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
+          System.out.println("1.æŸ¥è¯¢ 2.è½¬è´¦ 3.å–æ¬¾ 4.å­˜æ¬¾ 5.é€€å¡");
           break;}
      case 3:
-     System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
+     System.out.println("1.æŸ¥è¯¢ 2.è½¬è´¦ 3.å–æ¬¾ 4.å­˜æ¬¾ 5.é€€å¡");
      break;
      
 	
   }
- }
+ }*/
+}
 }
