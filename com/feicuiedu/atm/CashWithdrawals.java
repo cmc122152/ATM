@@ -1,70 +1,45 @@
-package com;
-import com.Login;
+package com.feicuiedu.atm;
 import java.util.Scanner;
 public class CashWithdrawals{
- public static void (User user) {
-  	Login log =new Login();
+ public void (User user) {
+  	User user =new User();
+  	double num=user.getAmount();
 	Scanner sc=new Scanner(System.in);
-	System.out.println("ÇëÊäÈëÈ¡¿î½ğ¶î");
+	System.out.println("è¯·è¾“å…¥å–æ¬¾é‡‘é¢(100çš„æ•´æ•°)");
 	double index=sc.nextInt();
-	if(index>this.amount){
-		System.out.println("Óà¶î²»×ã");
+	
+	if(index>num){
+		System.out.println("ä½™é¢ä¸è¶³");
+		break;
 	}
-	else if (index<this.amount){
-		System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥");
-		int input=new Scanner1(System.in).nextInt();
-	     switch(input){
-	      case 1:
-	         System.out.println("È¡¿î³É¹¦");
-	         System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	         break;
-	      case 2:
-	        Scanner sc1=new Scanner(System.in);
-	        System.out.println("ÇëÊäÈëÈ¡¿î½ğ¶î");
-	        double index1=sc1.nextInt();
-	        if(index1>this.amount){
-		    System.out.println("Óà¶î²»×ã");
-			}
-			else if (index1<this.amount){
-		    System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥");
-		    int input1=new Scanner2(System.in).nextInt();
-		    switch(input1){
-		    	case 1:
-		    	System.out.println("È¡¿î³É¹¦");
-	            System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	            break;
-	            case 2:
-	             Scanner sc2=new Scanner(System.in);
-	             System.out.println("ÇëÊäÈëÈ¡¿î½ğ¶î");
-	             double index2=sc2.nextInt();
-	             if(index2>this.amount){
-		         System.out.println("Óà¶î²»×ã");
-	             }
-	             else if (index2<this.amount){
-		         System.out.println("1.È·ÈÏ 2.ÖØĞÂÊäÈë 3.·µ»Ø²Ëµ¥");
-		         int input2=new Scanner3(System.in).nextInt();
-		         switch(input2){
-		    	  case 1:
-		    	  System.out.println("È¡¿î³É¹¦");
-	              System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	              break;
-	              case 2:
-	              break;
-	              case 3:
-	                System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	                break;
-	            } 
-	        }
-	            case 3:
-	            System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	            break;
-		    }
-		}	      
-		    case 3:
-	      System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
-	      break;
-	    
+	else if (index<num){
+		number=num;
+		break;
 	}
- }
+    
+	while(true);{
+
+		System.out.println("1.ç¡®è®¤ 2.é‡æ–°è¾“å…¥ 3.è¿”å›èœå•");
+		Scanner input=new Scanner(System.in);
+		String num2=input.next();
+		if(num2.equals("1")){
+			double amount=user.getAmount();
+            user.setAmount(amount-number);
+            System.out.println("å–æ¬¾æˆåŠŸ,ä½™é¢ä¸º"+user.getAmount());
+            Success success = new Success(user);
+			success.getSuccess();
+		}
+		   if(num2.equals("2")){
+		   	get.CashWithdrawals();
+		   }
+		   if(num2.equals("3")){
+		   	Menu menu = new Menu(user);
+			menu.getMethod();
+		   }
+		else if(){
+			System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥");
+			continue;
+		}
+	}
 }
 }
