@@ -1,4 +1,4 @@
-//package com;
+package com.feicuiedu.atm;
 import java.util.Scanner;
  public class User{
  	private String number="370120180104";
