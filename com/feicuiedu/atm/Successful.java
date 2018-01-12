@@ -1,7 +1,7 @@
-//package com;
+package com.feicuiedu.atm;
 public class Successful{
 	public static void main(String[] args) {
-		System.out.println("²Ù×÷³É¹¦£¡");
-		System.out.println("1.²éÑ¯ 2.×ªÕË 3.È¡¿î 4.´æ¿î 5.ÍË¿¨");
+		System.out.println("æ“ä½œæˆåŠŸï¼");
+		System.out.println("1.æŸ¥è¯¢ 2.è½¬è´¦ 3.å–æ¬¾ 4.å­˜æ¬¾ 5.é€€å¡");
 	}
 }
